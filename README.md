@@ -7,7 +7,7 @@ Usage:
 ```sh
 ./download_data.sh
 
-Rscript make_header
+Rscript make_header.R
 ```
 
 This will download [TARGET](https://ocg.cancer.gov/programs/target/data-matrix)
