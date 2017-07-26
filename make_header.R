@@ -60,9 +60,9 @@ phenotype_sub_df <- phenotype_df %>% dplyr::filter(sample_id %in% sample_order)
 table(phenotype_sub_df$`_primary_disease`)
 
 # Combine background heatmap with header base
-header_raw <- magick::image_read('cures_transparency.png')
+header_raw <- magick::image_read('cures_outlined_text.png')
 header <- header_raw %>% magick::image_scale("1000")
 background <- magick::image_read('real_data_heatmap.png')
-composite <- magick::image_composite(background, header, offset = "+1400+390")
+composite <- magick::image_composite(background, header, offset = "+1400+300")
 
 magick::image_write(composite, "composite_header.png")
